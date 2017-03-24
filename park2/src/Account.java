@@ -6,7 +6,7 @@ public class Account {
 	public double getbalance(){
 		return balance;
 	}
-	public void setbalance(double a){
+	protected void setbalance(double a){
 	balance = a;
 	}
 	
@@ -19,7 +19,14 @@ public class Account {
 	balance = balance - a;
 
 	}
+	public Account(double a){
+		balance = a;
+	}
+	
 }
+	
+	
+
 	
 	
 
