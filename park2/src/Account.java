@@ -1,5 +1,5 @@
 
-public class Account {
+abstract public class Account {
 	
 	private double balance;
 	
@@ -22,6 +22,10 @@ public class Account {
 	public Account(double a){
 		balance = a;
 	}
+	
+	public abstract double getWithdrawableAccount();
+
+	public abstract void passTime(int a);
 	
 }
 	
