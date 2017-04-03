@@ -64,5 +64,15 @@ public class CheckingAccount extends Account {
 		
 		
 	}
+	public double EstimateValue(int month){
+		
+		return getbalance()*Math.pow((1+interest), month); 
+	}
+	
+	public String toString(){
+		
+		return String.format("CheckingAccount_Balance : %.2f", getbalance());
+	}
+
 
 }

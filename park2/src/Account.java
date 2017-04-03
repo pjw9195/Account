@@ -1,5 +1,5 @@
 
-abstract public class Account {
+abstract public class Account implements Valuable {
 	
 	private double balance;
 	

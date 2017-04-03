@@ -41,5 +41,14 @@ public class SavingAccount extends Account {
 			
 		
 	}
+	public double EstimateValue(int month){
+		
+		return getbalance()*Math.pow((1+interest), month); 
+	}
+	
+	public String toString(){
+		
+		return String.format("SavingAccount_Balance : %.2f", getbalance());
+	}
 
 }
