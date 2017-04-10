@@ -31,12 +31,13 @@ public class SavingAccount extends Account {
 		
 	}
 	@Override
-	public void debit(double a) {
-		
-			if(time > 11){
+	public void debit(double a) throws Exception {
+
+		if(time > 11){
 			setbalance(getbalance() - a);
-		} else { System.out.println("아직 출금할 수 없습니다.");
-			
+		} else if(a <0 ){
+			throw new Exception("음수입력!");
+		} else {throw new Exception("아직 출금할 수 없습니다.");
 		}
 			
 		

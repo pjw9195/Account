@@ -16,12 +16,17 @@ public class CheckingAccount extends Account {
 	}
 	
 	@Override
-	public void debit(double a) {
-		if(getbalance()-a < -(credit_limit)){
-			System.out.printf("error!\n %f");	
-		}	else{
-			setbalance(getbalance() - a);
+	public void debit(double a) throws Exception  {
+		if(a <0 ){
+			throw new Exception("음수입력!");
 		}
+		if(getbalance()-a < -(credit_limit)){
+			throw new Exception("아직 출금할 수 없습니다.");
+		}	else if(getbalance()-a >= -(credit_limit)) {
+			setbalance(getbalance() - a);
+		} 
+			
+		
 			
 		
 	}
