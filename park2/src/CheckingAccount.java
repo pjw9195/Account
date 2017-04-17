@@ -57,6 +57,15 @@ public class CheckingAccount extends Account {
 		 }
 		 
 	}
+	public void passTime(){
+		 if(getbalance()>0){
+		setbalance(getbalance()*Math.pow((1+interest), 1));
+		 } else{
+			 
+			setbalance(getbalance()*Math.pow((1+loan_interest), 1));
+		 }
+		 
+	}
 	public boolean isBankrupted(){
 		if(getbalance() < -(credit_limit)){
 		//ÆÄ»ê
@@ -72,6 +81,10 @@ public class CheckingAccount extends Account {
 	public double EstimateValue(int month){
 		
 		return getbalance()*Math.pow((1+interest), month); 
+	}
+	public double EstimateValue(){
+		
+		return getbalance()*Math.pow((1+interest), 1); 
 	}
 	
 	public String toString(){

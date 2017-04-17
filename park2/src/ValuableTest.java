@@ -11,7 +11,8 @@ public class ValuableTest {
 		
 		for(Valuable objectItem : objectList){
 			System.out.printf("%s\n",objectItem.toString());
-			System.out.printf("6 month later Valuable : %.2f\n\n", objectItem.EstimateValue(6));
+			System.out.printf("1 month later Value (Method Overloding, no parameter) : %.2f\n" , objectItem.EstimateValue());
+			System.out.printf("5 month later Valuable : %.2f\n\n", objectItem.EstimateValue(5));
 		}
 	}
 

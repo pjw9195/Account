@@ -24,10 +24,15 @@ public class SavingAccount extends Account {
 			setbalance(getbalance()*Math.pow((1+interest), time));
 			num=1;
 		}
+	}
 		
-		
-		
+	public void passTime(){
+			time = 1 + time;
 			
+			if(time > 11 && num ==0 ){
+				setbalance(getbalance()*Math.pow((1+interest), time));
+				num=1;
+			}	
 		
 	}
 	@Override
@@ -45,6 +50,10 @@ public class SavingAccount extends Account {
 	public double EstimateValue(int month){
 		
 		return getbalance()*Math.pow((1+interest), month); 
+	}
+	public double EstimateValue(){
+		
+		return getbalance()*Math.pow((1+interest), 1); 
 	}
 	
 	public String toString(){

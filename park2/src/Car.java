@@ -9,8 +9,15 @@ public class Car implements Valuable {
 		this.price = price;
 	}
 	public double EstimateValue(int month){
+		
+		for(int i = 0; i< month-1; i++){
+			price = (price*(0.99));
+			}
+		return price;
+	}
+	public double EstimateValue(){
 		price = (price*(0.8));
-		for(int i = 0; i< month; i++){
+		for(int i = 0; i< 1; i++){
 		price = (price*(0.99));
 		}
 		return price;
