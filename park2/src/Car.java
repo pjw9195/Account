@@ -3,24 +3,25 @@ public class Car implements Valuable {
 	private String name;
 	private double price;
 
+	int i=0;
 	
 	public Car(String name, double price){
 		this.name = name;
 		this.price = price;
 	}
 	public double EstimateValue(int month){
-		
-		for(int i = 0; i< month-1; i++){
+		if(i==0){
+		price = (price*(0.8));
+		i=1;
+		}
+		for(int i = 0; i< month; i++){
 			price = (price*(0.99));
 			}
 		return price;
 	}
 	public double EstimateValue(){
-		price = (price*(0.8));
-		for(int i = 0; i< 1; i++){
-		price = (price*(0.99));
-		}
-		return price;
+		
+		return EstimateValue(1);
 	}
 	
 	public String toString(){

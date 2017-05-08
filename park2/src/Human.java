@@ -15,7 +15,7 @@ public class Human implements Valuable {
 	}
 	public double EstimateValue(){
 		
-		return Double.POSITIVE_INFINITY;
+		return EstimateValue(1);
 	}
 	
 	public String toString(){

@@ -1,8 +1,21 @@
-
+import java.util.List;
+import java.util.ArrayList;
 abstract public class Account implements Valuable {
 	
 	private double balance;
 	
+	public static double sumForAccount(ArrayList<? extends Account> list){
+		double sum = 0;
+		for(Account account : list){
+			sum+=account.getbalance();
+		}
+		return sum;
+	}
+	public static void passTimeForList(ArrayList<? extends Account> list,int month){
+		for(Account account : list){
+			account.passTime(month);
+		}
+	}
 	public double getbalance(){
 		return balance;
 	}

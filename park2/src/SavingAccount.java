@@ -53,7 +53,7 @@ public class SavingAccount extends Account {
 	}
 	public double EstimateValue(){
 		
-		return getbalance()*Math.pow((1+interest), 1); 
+		return EstimateValue(1);
 	}
 	
 	public String toString(){
